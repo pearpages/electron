@@ -26,6 +26,10 @@
     "electron-prebuilt": "^1.2.0"
   },
   "dependencies": {
-    "electron-reload": "^1.0.0"
+    "electron-reload": "^1.0.0",
+    "font-awesome": "^4.6.3",
+    "handlebars": "^4.0.5",
+    "jquery": "^3.0.0",
+    "underscore": "^1.8.3"
   }
 }

@@ -1,20 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="./css/app.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
+  <script>
+    var $ = jquery = require('jquery');
+  </script>
+</head>
+
+<body>
+
+  <div id="side-nav">
+    <ul>
+      <li><a href="#" id="home"><i class="fa fa-home"></i></a></li>
+      <li><a href="#"><i class="fa fa-list"></i></a></li>
+      <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+      <li><a href="#"><i class="fa fa-user"></i></a></li>
+    </ul>
+  </div>
+
+  <div id="main">
+
+  </div>
+
+  <!--
     <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <div> All of the Node.js APIs are available in this renderer process. </div>
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+    -->
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+</body>
+
+<script>
+  // You can also require other files to run in this process
+    require('./renderer.js');
+    
+    var app = require('./js/app');
+    app.on('rendered', function(html){
+      $('#main').html(html);
+    });
+    $(function(){
+      app.emit('view-selected','home');
+      $('#search').on('click', function(){
+        app.emit('view-selected','search');
+      });
+            $('#home').on('click', function(){
+        app.emit('view-selected','home');
+      });
+    });
+</script>
+
 </html>

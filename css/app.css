@@ -1,3 +1,24 @@
 body {
     font-family: "Lucida Grande", "Helvetica Neue", "Segoe UI", Ubuntu, Cantarell, Arial, sans-serif;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#side-nav {
+    background-color: #000;
+    padding-top: 18px;
+    width: 65px;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+#side-nav ul {
+    list-style: none;
+}
+
+#main {
+    position:absolute;
+    left: 65px;
 }

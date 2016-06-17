@@ -8,3 +8,20 @@ npm install electron-reload --save
 // the parametr is the directory to watch
 require("electron-reload")(__dirname);
 ```
+
+## Using Phi
+
+[Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio)
+
+## Layouts
+
+[React Desktop](http://reactdesktop.js.org/)
+
+[Photon](http://photonkit.com/)
+
+## Using Handlebars
+
+```bash
+npm install --save handlebars underscore
+```
+
